@@ -1,12 +1,12 @@
 jQuery dataset
 ==============
 
-jQuery approach ist to use $.fn.data but this does not update dom only memory - this script makes use of native js element.dataset
+jQuery approach ist to use `$.fn.data` but this does not updates dom, only memory - this script makes use of native js `element.dataset`
 
 # Features
 
 - prefers [HTML5 dataset](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset)
-- fallback to elements attribute ´data-*´
+- fallback to elements attribute `data-*`
 
 # Examples
 
