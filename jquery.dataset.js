@@ -4,7 +4,7 @@
  * this script makes use of native js element.dataset
  *
  * @author: Stefan Benicke <stefan.benicke@gmail.com>
- * @version 1.0.0
+ * @version 1.0.1
  */
 (function ($, undefined) {
 
@@ -33,7 +33,9 @@
             return this.each(function () {
                 var element = this;
                 if (_native) {
-                    element.dataset[key] = value;
+                    if (element && typeof element.dataset === 'object') {
+                        element.dataset[key] = value;
+                    }
                 } else {
                     $(element).attr(unCamelCase(key), value);
                 }
